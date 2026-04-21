@@ -27,24 +27,31 @@ nav a {
     -webkit-text-stroke: 1px black;
 }
 
+nav li:nth-of-type(5) {
+    padding-right: 40px;
+}
+
 
 #historia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    padding-top: 50px;
-    padding-left: 10px;
+    padding-top: 30px;
     gap: 5px;
 }
 
-#historia h2 {
+#historia h2, #producto h2, #logro h2 {
     color:tan;
     text-decoration: underline wavy;
     -webkit-text-stroke: 1px black;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
 }
 
 #historia p {
     width: 550px;
+    height: auto;
+    padding-left: 10px;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -58,8 +65,8 @@ nav a {
 
 #panadería2 {
     padding-top: 70px;
-    padding-right: 5px;
-    width: 370px;
+    padding-right: 30px;
+    width: 350px;
     height: 200px;
 }
 
@@ -68,17 +75,19 @@ nav a {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-    border: solid black 1px;
     list-style: none;
+    margin-right: 30px;
+    margin-left: -30px;
 }
 
-#producto ul li {
-    color:bisque;
+#producto li {
+    border: solid black 1px;
+}
+
+#producto h3 {
+    color:teal;
     text-decoration: underline dotted;
     text-align: center;
-}
-
-#producto div {
     gap: 10px;
     margin: 10px;
 }
@@ -87,4 +96,121 @@ nav a {
     text-align: justify;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
+    padding: 0px 10px 0px 10px;
+}
+
+#producto .food {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 5px auto;
+    width: 200px;
+    height: 200px;
+    border: solid orange 1px;
+}
+
+#logro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+#logro h3 {
+    color:seagreen;
+}
+
+#logro p {
+    text-align: justify;
+    width: 500px;
+}
+
+#logro_pic {
+    padding-top: 10px;
+    width: 600px;
+    height: 830px;
+    transition: transform 0.3s ease;
+}
+
+#misión_visión {
+    padding: 0px 10px;
+}
+
+#misión_visión h2 {
+    color:coral;
+    text-decoration: underline;
+}
+
+#misión_visión h3 {
+    padding: 0px 0px 0px 30px;
+    color:olivedrab;
+}
+
+#misión_visión p {
+    text-align: justify;
+    padding: 0px 30px;
+}
+
+#contacto {
+    padding: 0 10px;
+}
+
+#contacto a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#contacto a span {
+    display: flex;
+    color:skyblue;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    margin: 5px 0px 0px 5px;
+}
+
+#contacto a span:hover {
+    color:violet;
+    text-decoration: underline;
+}
+
+#contacto h2 {
+    color:palevioletred;
+    text-decoration: underline;
+}
+
+#contacto ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+
+.logos_pics {
+    width: 80px;
+    height: 80px;
+}
+
+footer p {
+    background-color: gainsboro;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.animated {
+    transition: transform 0.3s ease;
+}
+
+@keyframes vibrar {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(2px, -2px); }
+    50%  { transform: translate(-2px, 2px); }
+    75%  { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+#contacto img:hover {
+    animation: vibrar 0.2s infinite;
 }
