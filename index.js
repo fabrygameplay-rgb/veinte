@@ -33,3 +33,32 @@ const goal = document.querySelectorAll("#logro_pic");
             zoomPic.style.transform = "scale(1)";
         });
     });
+
+fetch("http://localhost:3000/productos")
+    .then(res =>res.json())
+    .then(data => {
+
+        const lista = document.querySelector("#producto ul");
+        lista.innerHTML = "";
+
+        data.forEach(producto => {
+            const li = document.createElement("li");
+
+        li.innerHTML = `
+        <h3>${producto.nombre}</h3>
+        <p>$${producto.descripción}</p>
+        <img class ="food" src="Fotos/${producto.imagen} alt="${prodcuto.nombre}">;
+        
+        `;
+        
+        li.addEventListener("mouseenter", () => {
+            li.style.background = "linear-gradient(to top, rgba(218, 165, 32, 0.35), rgba(240, 200, 90, 0.15))";
+        });
+
+        li.addEventListener("mouseleave", () => {
+            li.style.background = "transparent";
+        });
+        
+        lista.appendChild(li);
+    });
+});
