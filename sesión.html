@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Fotos/Logo.png">
+    <title>Panadería Campos</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Panadería Campos</h1>
+    </header>
+
+    <div class="contenedor_tresBarras2">
+        <ul>
+            <li class="animated">
+                <button class="tresBarras2">☰</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menú2 oculto">
+        <ul>
+            <li><a href="index.html">🗸 Inicio</a></li>
+            <li><a href="pedidos.html">🗸 Gestión de pedidos</a></li>
+            <li><a href="control.html">🗸 Control de producción</a></li>
+            <li><a href="clientes.html">🗸 Gestión de clientes</a></li>
+            <li><a href="inventario.html">🗸 Inventario</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <section id="auth">
+
+        <div class="auth_container">
+
+            <div class="auth_box">
+
+                <div class="tabs">
+                    <button class="tab activo" data-tab="login">Iniciar sesión</button>
+                    <button class="tab" data-tab="registro">Registrarse</button>
+                </div>
+
+                <div class="contenido activo" id="login">
+                    <h2>Bienvenido</h2>
+                    <form>
+                        <input type="email" placeholder="Correo">
+                        <input type="password" placeholder="Contraseña">
+                        <button type="submit">Ingresar</button>
+                    </form>
+                </div>
+
+                <div class="contenido" id="registro">
+                    <h2>Crear cuenta</h2>
+                    <form>
+                        <input type="text" placeholder="Nombre">
+                        <input type="email" placeholder="Correo">
+                        <input type="password" placeholder="Contraseña">
+                        <button type="submit">Registrarse</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <section id="cuenta">
+
+            <div class="cuenta_box">
+
+                <h2>Mi cuenta</h2>
+
+                <p><strong>Usuario:</strong> Fabrizio</p>
+                <p><strong>Correo:</strong> correo@email.com</p>
+
+                <div class="acciones_cuenta">
+                    <button class="logout">Cerrar sesión</button>
+                    <button class="delete">Borrar cuenta</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

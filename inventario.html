@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Fotos/Logo.png">
+    <title>Panadería Campos</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Panadería Campos</h1>
+    </header>
+
+    <div class="contenedor_tresBarras2">
+            <ul>
+                <li class="animated">
+                    <button class="tresBarras2">☰</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menú2 oculto">
+            <ul>
+                <li><a href="index.html">🗸 Inicio</a></li>
+                <li><a href="pedidos.html">🗸 Gestión de pedidos</a></li>
+                <li><a href="control.html">🗸 Control de producción</a></li>
+                <li><a href="clientes.html">🗸 Gestión de clientes</a></li>
+                <li><a href="inventario.html">🗸 Inventario</a></li>     
+            </ul>
+        </div>
+
+    <hr>
+
+    <section id="inventario">
+
+        <h2>Inventario</h2>
+
+        <div class="inventario_topbar">
+            <input type="text" placeholder="🔍 Buscar producto...">
+            <button>+ Agregar</button>
+        </div>
+
+        <div class="inventario_resumen">
+
+            <div class="resumen_item">
+                <h4>Total productos</h4>
+                <p>35</p>
+            </div>
+
+            <div class="resumen_item alerta">
+                <h4>Stock bajo</h4>
+                <p>6</p>
+            </div>
+
+            <div class="resumen_item">
+                <h4>Stock total</h4>
+                <p>540</p>
+            </div>
+
+        </div>
+
+        <div class="inventario_lista">
+
+            <div class="producto">
+                <div class="info">
+                    <h3>Harina</h3>
+                    <p>Stock: 100</p>
+                </div>
+                <div class="acciones">
+                    <span class="estado ok">Normal</span>
+                    <button>Editar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="info">
+                    <h3>Azúcar</h3>
+                    <p>Stock: 20</p>
+                </div>
+                <div class="acciones">
+                    <span class="estado bajo">Bajo</span>
+                    <button>Editar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <div class="info">
+                    <h3>Levadura</h3>
+                    <p>Stock: 10</p>
+                </div>
+                <div class="acciones">
+                    <span class="estado critico">Crítico</span>
+                    <button>Editar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="inventario_form">
+
+            <h3>Agregar / Actualizar producto</h3>
+
+            <form>
+                <input type="text" placeholder="Producto">
+                <input type="number" placeholder="Cantidad">
+                <button type="submit">Guardar</button>
+            </form>
+
+        </div>
+
+    </section>
+
+<script src="index.js"></script>
+
+</body>
+</html>

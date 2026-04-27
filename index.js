@@ -34,6 +34,47 @@ const goal = document.querySelectorAll("#logro_pic");
         });
     });
 
+const buttonPages = document.getElementById("tresBarras");
+const pagesOn = document.getElementById("menú");
+
+if (buttonPages && pagesOn) {
+    buttonPages.addEventListener("click", () => {
+        pagesOn.classList.toggle("oculto");
+    });
+};
+
+const buttonPages2 = document.querySelector(".tresBarras2");
+const pagesOn2 = document.querySelector(".menú2");
+
+if (buttonPages2 && pagesOn2) {
+    buttonPages2.addEventListener("click", () => {
+        pagesOn2.classList.toggle("oculto");
+    });
+};
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const inputs = formulario.querySelectorAll("input");
+
+    const costumer = inputs[0].value;
+    const quantity = inputs[1].value;
+    const product = inputs[2].value;
+    const date = formulario.querySelector("select").value;
+    
+    const sub_product = document.createElement("li");
+
+    sub_product.innerHTML = `
+    <strong>${costumer}</strong> pidió
+    <span>${product}</span>
+    (x${quantity}) - ${date}
+    `;
+
+    lista.appendChild(sub_product);
+
+    formulario.reset();
+});
+
 fetch("http://localhost:3000/productos")
     .then(res =>res.json())
     .then(data => {
@@ -47,7 +88,7 @@ fetch("http://localhost:3000/productos")
         li.innerHTML = `
         <h3>${producto.nombre}</h3>
         <p>$${producto.descripción}</p>
-        <img class ="food" src="Fotos/${producto.imagen} alt="${prodcuto.nombre}">;
+        <img class ="food" src="Fotos/${producto.imagen} alt="${prodcuto.nombre}">
         
         `;
         

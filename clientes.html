@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Fotos/Logo.png">
+    <title>Panadería Campos</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Panadería Campos</h1>
+    </header>
+
+    <div class="contenedor_tresBarras2">
+            <ul>
+                <li class="animated">
+                    <button class="tresBarras2">☰</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menú2 oculto">
+            <ul>
+                <li><a href="index.html">🗸 Inicio</a></li>
+                <li><a href="pedidos.html">🗸 Gestión de pedidos</a></li>
+                <li><a href="control.html">🗸 Control de producción</a></li>
+                <li><a href="clientes.html">🗸 Gestión de clientes</a></li>
+                <li><a href="inventario.html">🗸 Inventario</a></li>     
+            </ul>
+        </div>
+
+    <hr>
+
+    <section id="clientes">
+
+    <h2>Gestión de Clientes</h2>
+
+    <div class="clientes_layout">
+
+        <div class="panel_izquierdo">
+
+            <div class="resumen_clientes">
+                <div class="mini_card">
+                    <h3>Total</h3>
+                    <p>120</p>
+                </div>
+                <div class="mini_card">
+                    <h3>Frecuentes</h3>
+                    <p>45</p>
+                </div>
+                <div class="mini_card">
+                    <h3>Nuevos</h3>
+                    <p>12</p>
+                </div>
+            </div>
+
+            <input type="text" placeholder="🔍 Buscar cliente..." class="buscador">
+
+            <div class="lista_clientes">
+
+                <div class="cliente_card">
+                    <h4>Juan Pérez</h4>
+                    <p>📞 987654321</p>
+                    <span class="badge frecuente">Frecuente</span>
+                </div>
+
+                <div class="cliente_card">
+                    <h4>María López</h4>
+                    <p>📞 912345678</p>
+                    <span class="badge nuevo">Nuevo</span>
+                </div>
+
+                <div class="cliente_card">
+                    <h4>Carlos Díaz</h4>
+                    <p>📞 998877665</p>
+                    <span class="badge frecuente">Frecuente</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="panel_derecho">
+
+            <div class="card_form">
+                <h3>Agregar Cliente</h3>
+
+                <form>
+                    <input type="text" placeholder="Nombre completo">
+                    <input type="text" placeholder="Teléfono">
+                    <input type="email" placeholder="Correo (opcional)">
+                    <select>
+                        <option>Tipo de cliente</option>
+                        <option>Nuevo</option>
+                        <option>Frecuente</option>
+                    </select>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="index.js"></script>
+
+</body>
+</html>

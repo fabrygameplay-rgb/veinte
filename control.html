@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Fotos/Logo.png">
+    <title>Panadería Campos</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Panadería Campos</h1>
+    </header>
+
+    <main>
+
+        <div class="contenedor_tresBarras2">
+            <ul>
+                <li class="animated">
+                    <button class="tresBarras2">☰</button>
+                </li>
+            </ul>
+        </div>
+
+            <div class="menú2 oculto">
+                <ul>
+                    <li><a href="index.html">🗸 Inicio</a></li>
+                    <li><a href="pedidos.html">🗸 Gestión de pedidos</a></li>
+                    <li><a href="control.html">🗸 Control de producción</a></li>
+                    <li><a href="clientes.html">🗸 Gestión de clientes</a></li>
+                    <li><a href="inventario.html">🗸 Inventario</a></li>     
+                </ul>
+            </div>
+
+        <hr>
+
+        <section id="control_producción">
+
+            <h2>Control de Producción</h2>
+
+            <div class="dashboard">
+
+                <div class="card resumen">
+                    <h3>Producción de hoy</h3>
+                    <p><strong>120</strong> unidades</p>
+                </div>
+
+                <div class="card resumen">
+                    <h3>En proceso</h3>
+                    <p><strong>35</strong> unidades</p>
+                </div>
+
+                <div class="card resumen">
+                    <h3>Completados</h3>
+                    <p><strong>85</strong> unidades</p>
+                </div>
+
+                <div class="card formulario">
+                    <h3>Registrar Producción</h3>
+
+                    <form>
+                        <input type="text" placeholder="Producto">
+                        <input type="number" placeholder="Cantidad">
+                        <select>
+                            <option>Pendiente</option>
+                            <option>En proceso</option>
+                            <option>Completado</option>
+                        </select>
+                        <button type="submit">Agregar</button>
+                    </form>
+                </div>
+
+                <div class="card tabla">
+                    <h3>Lista de Producción</h3>
+
+                    <table>
+                     <thead>
+                         <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pan de yema</td>
+                            <td>50</td>
+                            <td class="pendiente">Pendiente</td>
+                        </tr>
+                        <tr>
+                            <td>Rosca</td>
+                            <td>30</td>
+                            <td class="proceso">En proceso</td>
+                        </tr>
+                        <tr>
+                            <td>Pie de manzana</td>
+                            <td>40</td>
+                            <td class="completo">Completado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        </section>
+
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
