@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SSGST - Panadería Campos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#1b1511;
+    font-family:'Poppins', sans-serif;
+    color:#fff4dc;
+    overflow-x:hidden;
+}
+
+body::-webkit-scrollbar{
+    width:10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:#d8923b;
+}
+
+header{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url('PORTADA_AQUI.jpg') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    border-bottom:5px solid #d8923b;
+}
+
+.hero{
+    max-width:900px;
+}
+
+.hero h1{
+    font-family:'Press Start 2P', cursive;
+    font-size:3rem;
+    color:#ffcf70;
+    line-height:1.5;
+    text-shadow:4px 4px 0 #7c3f00;
+}
+
+.hero p{
+    margin-top:30px;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:#ffe7ba;
+}
+
+.hero button{
+    margin-top:40px;
+    padding:18px 35px;
+    border:none;
+    background:#d8923b;
+    color:#1b1511;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:12px;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.hero button:hover{
+    transform:scale(1.05);
+    background:#ffcf70;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Press Start 2P', cursive;
+    color:#ffcf70;
+    margin-bottom:50px;
+    font-size:1.5rem;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:100px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#2c2019;
+    border:3px solid #d8923b;
+    border-radius:25px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(255,207,112,.4);
+}
+
+.img-placeholder{
+    width:100%;
+    height:230px;
+    background:
+    linear-gradient(45deg,#4a3527,#241812);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    color:#ffcf70;
+    font-weight:bold;
+    border-bottom:3px solid #d8923b;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#ffcf70;
+    margin-bottom:15px;
+    font-size:1.2rem;
+}
+
+.card-content p{
+    color:#f8e6c7;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#d8923b;
+    color:#1b1511;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffcf70;
+}
+
+.timeline{
+    position:relative;
+    margin-top:50px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:6px;
+    height:100%;
+    background:#d8923b;
+}
+
+.timeline-item{
+    width:50%;
+    padding:30px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-box{
+    background:#2c2019;
+    border:3px solid #d8923b;
+    border-radius:20px;
+    padding:25px;
+}
+
+.timeline-box h3{
+    color:#ffcf70;
+    margin-bottom:15px;
+}
+
+.timeline-box p{
+    line-height:1.7;
+}
+
+footer{
+    background:#120d09;
+    padding:40px;
+    text-align:center;
+    border-top:5px solid #d8923b;
+}
+
+footer h2{
+    font-family:'Press Start 2P', cursive;
+    color:#ffcf70;
+    margin-bottom:20px;
+    font-size:1rem;
+}
+
+footer p{
+    color:#ffe7ba;
+    line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.timeline::before{
+    left:20px;
+}
+
+.timeline-item{
+    width:100%;
+    padding-left:60px;
+    padding-right:20px;
+}
+
+.timeline-item:nth-child(even){
+    left:0;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.section-title{
+    font-size:1rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+        <h1>SSGST<br>PANADERÍA CAMPOS</h1>
+
+        <p>
+            Sistema de Seguridad y Salud en el Trabajo aplicado al área de producción,
+            almacenamiento y atención de la panadería.
+        </p>
+
+        <button>Ver Documentación</button>
+    </div>
+</header>
+
+<section class="container">
+
+    <h2 class="section-title">DOCUMENTOS SST</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="img-placeholder">
+                SUBIR IMAGEN MATRIZ IPERC
+            </div>
+
+            <div class="card-content">
+                <h3>Matriz IPERC</h3>
+                <p>
+                    Espacio para colocar la matriz de identificación de peligros,
+                    evaluación de riesgos y controles.
+                </p>
+
+                <a href="#" class="btn">Abrir Documento</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-placeholder">
+                SUBIR DIAGRAMA ISHIKAWA
+            </div>
+
+            <div class="card-content">
+                <h3>Diagrama Ishikawa</h3>
+                <p>
+                    Área destinada al análisis de causas relacionadas a incidentes
+                    y riesgos laborales.
+                </p>
+
+                <a href="#" class="btn">Abrir Documento</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-placeholder">
+                SUBIR ÁRBOL DE CAUSAS
+            </div>
+
+            <div class="card-content">
+                <h3>Árbol de Causas y Efectos</h3>
+                <p>
+                    Espacio para representar visualmente causas raíz y consecuencias
+                    de accidentes.
+                </p>
+
+                <a href="#" class="btn">Abrir Documento</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-placeholder">
+                SUBIR MATRIZ CHECKLIST
+            </div>
+
+            <div class="card-content">
+                <h3>Matriz Checklist</h3>
+                <p>
+                    Área para auditorías, inspecciones y verificación de cumplimiento.
+                </p>
+
+                <a href="#" class="btn">Abrir Documento</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-placeholder">
+                SUBIR MATRIZ EPP
+            </div>
+
+            <div class="card-content">
+                <h3>Matriz de EPP</h3>
+                <p>
+                    Registro de equipos de protección personal utilizados en cada área.
+                </p>
+
+                <a href="#" class="btn">Abrir Documento</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-placeholder">
+                SUBIR FICHAS TÉCNICAS
+            </div>
+
+            <div class="card-content">
+                <h3>Fichas Técnicas</h3>
+                <p>
+                    Espacio para documentos técnicos, manuales y especificaciones.
+                </p>
+
+                <a href="#" class="btn">Abrir Documento</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2 class="section-title">IMPLEMENTACIÓN SSGST</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-box">
+                <h3>Identificación de Riesgos</h3>
+                <p>
+                    Registro de peligros presentes en el área de trabajo.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-box">
+                <h3>Evaluación de Riesgos</h3>
+                <p>
+                    Priorización de riesgos según nivel de probabilidad y severidad.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-box">
+                <h3>Control y Prevención</h3>
+                <p>
+                    Implementación de medidas preventivas y correctivas.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-box">
+                <h3>Capacitaciones SST</h3>
+                <p>
+                    Espacio para evidencias y cronogramas de capacitación.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h2>PANADERÍA CAMPOS · SST</h2>
+
+    <p>
+        Sistema de Seguridad y Salud en el Trabajo<br>
+        Proyecto Académico — Diseño Retro Industrial
+    </p>
+
+</footer>
+
+</body>
+</html>
