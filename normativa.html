@@ -249,6 +249,34 @@ footer p{
     font-size:1rem;
 }
 
+.doc-img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-bottom:3px solid #d8923b;
+}
+
+.doc-img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+    border-bottom:3px solid #d8923b;
+}
+
+.card-content .btn{
+    margin-top:5px;
+}
+
+.card-content{
+    display:flex;
+    flex-direction:column;
+}
+
+.card-content p{
+    flex:1;
+}
+
 }
 </style>
 </head>
@@ -264,7 +292,9 @@ footer p{
             almacenamiento y atención de la panadería.
         </p>
 
-        <button>Ver Documentación</button>
+        <button onclick="document.querySelector('.container').scrollIntoView({behavior:'smooth'})">
+            Ver Documentación
+        </button>
     </div>
 </header>
 
@@ -274,100 +304,251 @@ footer p{
 
     <div class="grid">
 
-        <div class="card">
-            <div class="img-placeholder">
-                SUBIR IMAGEN MATRIZ IPERC
-            </div>
-
-            <div class="card-content">
-                <h3>Matriz IPERC</h3>
-                <p>
-                    Espacio para colocar la matriz de identificación de peligros,
-                    evaluación de riesgos y controles.
-                </p>
-
-                <a href="#" class="btn">Abrir Documento</a>
-            </div>
+    <div class="card">
+        <div class="img-placeholder">
+            MATRIZ IPERC
         </div>
 
-        <div class="card">
-            <div class="img-placeholder">
-                SUBIR DIAGRAMA ISHIKAWA
-            </div>
+        <div class="card-content">
+            <h3>Matriz IPERC</h3>
 
-            <div class="card-content">
-                <h3>Diagrama Ishikawa</h3>
-                <p>
-                    Área destinada al análisis de causas relacionadas a incidentes
-                    y riesgos laborales.
-                </p>
+            <p>
+                Identificación de peligros, evaluación de riesgos y controles aplicables.
+            </p>
 
-                <a href="#" class="btn">Abrir Documento</a>
-            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1aRyXbSNEJGrfGMhiUFfn6W_rZfCs_4Ui3fPISaC6X5Q/edit?usp=sharing"
+               target="_blank"
+               class="btn">
+                Abrir Documento
+            </a>
         </div>
-
-        <div class="card">
-            <div class="img-placeholder">
-                SUBIR ÁRBOL DE CAUSAS
-            </div>
-
-            <div class="card-content">
-                <h3>Árbol de Causas y Efectos</h3>
-                <p>
-                    Espacio para representar visualmente causas raíz y consecuencias
-                    de accidentes.
-                </p>
-
-                <a href="#" class="btn">Abrir Documento</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-placeholder">
-                SUBIR MATRIZ CHECKLIST
-            </div>
-
-            <div class="card-content">
-                <h3>Matriz Checklist</h3>
-                <p>
-                    Área para auditorías, inspecciones y verificación de cumplimiento.
-                </p>
-
-                <a href="#" class="btn">Abrir Documento</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-placeholder">
-                SUBIR MATRIZ EPP
-            </div>
-
-            <div class="card-content">
-                <h3>Matriz de EPP</h3>
-                <p>
-                    Registro de equipos de protección personal utilizados en cada área.
-                </p>
-
-                <a href="#" class="btn">Abrir Documento</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-placeholder">
-                SUBIR FICHAS TÉCNICAS
-            </div>
-
-            <div class="card-content">
-                <h3>Fichas Técnicas</h3>
-                <p>
-                    Espacio para documentos técnicos, manuales y especificaciones.
-                </p>
-
-                <a href="#" class="btn">Abrir Documento</a>
-            </div>
-        </div>
-
     </div>
+
+    <div class="card">
+        <div class="img-placeholder">
+            DIAGRAMA ISHIKAWA
+        </div>
+
+        <div class="card-content">
+            <h3>Diagrama Ishikawa</h3>
+
+            <p>
+                Análisis de causas relacionadas con incidentes y riesgos laborales.
+            </p>
+
+            <a href="Fotos/Ishikawa.jpeg"
+            target="_blank"
+            class="btn">
+                Abrir Imagen
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-placeholder">
+            ÁRBOL DE CAUSAS
+        </div>
+
+        <div class="card-content">
+            <h3>Árbol de Causas y Efectos</h3>
+
+            <p>
+                Representación visual de causas raíz y consecuencias de accidentes.
+            </p>
+
+            <a href="Fotos/árbol.jpeg"
+            target="_blank"
+            class="btn">
+                Abrir Imagen
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-placeholder">
+            MATRIZ CHECKLIST
+        </div>
+
+        <div class="card-content">
+            <h3>Matriz Checklist</h3>
+
+            <p>
+                Auditorías, inspecciones y verificación de cumplimiento SST.
+            </p>
+
+            <a href="https://comunidadupnedu-my.sharepoint.com/:x:/g/personal/n00403970_upn_pe/IQB4OohWqAh8QavOBW1vHtEXAT9grAFm-EMUK1WwiaVtPe4?e=hFBLdW"
+               target="_blank"
+               class="btn">
+                Abrir Documento
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-placeholder">
+            MATRIZ EPP
+        </div>
+
+        <div class="card-content">
+            <h3>Matriz de EPP</h3>
+
+            <p>
+                Equipos de protección personal utilizados en cada área.
+            </p>
+
+            <a href="https://docs.google.com/spreadsheets/d/13T78FBGFQp_t0N3PtEotV_AaUqgEyEFr6Oin5s2nPbQ/edit?gid=1687861822#gid=1687861822"
+               target="_blank"
+               class="btn">
+                Abrir Documento
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+    <div class="img-placeholder">
+        KÁRDEX
+    </div>
+
+    <div class="card-content">
+        <h3>Matriz Kárdex</h3>
+
+        <p>
+            Registro y control de equipos, materiales y recursos empleados en SST.
+        </p>
+
+        <a href="https://docs.google.com/spreadsheets/d/1HEplqh3lJI5byrSPYEvYt8JsPlD-cEkhQH6oMa2KI9k/edit?usp=sharing"
+           target="_blank"
+           class="btn">
+            Abrir Documento
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="img-placeholder">
+        PROCEDIMIENTO EPP
+    </div>
+
+    <div class="card-content">
+        <h3>Gestión y Uso de EPP</h3>
+
+        <p>
+            Procedimiento para la selección, uso y mantenimiento de equipos de protección personal.
+        </p>
+
+        <a href="https://docs.google.com/document/d/1PnVIIyrfBDQfVS2g246EHJxfUwa6R1AwHan6rWObX24/edit?usp=sharing"
+           target="_blank"
+           class="btn">
+            Abrir Documento
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="img-placeholder">
+        FICHA TÉCNICA EPP
+    </div>
+
+    <div class="card-content">
+        <h3>Ficha Técnica</h3>
+
+        <p>
+            Especificaciones técnicas y características de los equipos de protección personal.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1v8O29YflubljdrsI266VIQ4ccIRNm0yf/view?usp=sharing"
+           target="_blank"
+           class="btn">
+            Abrir Documento
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="img-placeholder">
+        OBJETIVOS SGSSO
+    </div>
+
+    <div class="card-content">
+        <h3>Objetivos del SGSSO</h3>
+
+        <p>
+            Objetivos estratégicos y metas del Sistema de Gestión de Seguridad y Salud en el Trabajo.
+        </p>
+
+        <a href="https://docs.google.com/document/d/1eDQa5GCzJiSh_zwE9Ehf_3kzmkKM9dwuSl0FEKznPW0/edit?usp=sharing"
+           target="_blank"
+           class="btn">
+            Abrir Documento
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="img-placeholder">
+        PLANOS
+    </div>
+
+    <div class="card-content">
+        <h3>Planos de la Empresa</h3>
+
+        <p>
+            Distribución física de la tienda y planta de producción de Panadería Campos.
+        </p>
+
+        <a href="https://drive.google.com/file/d/1_Xbpq-xiphP-j6BR7XEgSjrqsCw2pdpC/view?usp=sharing"
+           target="_blank"
+           class="btn">
+            Plano Tienda
+        </a>
+
+        <br><br>
+
+        <a href="https://drive.google.com/file/d/1RCv8awhFxv0vypqARO6qj06KrtwXs-n3/view?usp=sharing"
+           target="_blank"
+           class="btn">
+            Planta Producción
+        </a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="img-placeholder">
+        DOCUMENTOS SST
+    </div>
+
+    <div class="card-content">
+        <h3>Normativa y Gestión SST</h3>
+
+        <p>
+            Documentos normativos y herramientas para la gestión del sistema SST.
+        </p>
+
+        <a href="https://docs.google.com/document/d/105ZrrNTUsIBK_U3944_P48z5Doaku6a_eusMgbi_Hj4/edit?usp=sharing"
+           target="_blank"
+           class="btn">
+            RISST
+        </a>
+
+        <br><br>
+
+        <a href="https://docs.google.com/document/d/1C86rdNgw6WT1zcojnKB1A6ebsbjO97COR83bAiyVyhI/edit?usp=sharing"
+           target="_blank"
+           class="btn">
+            Política SST
+        </a>
+
+        <br><br>
+
+        <a href="https://comunidadupnedu-my.sharepoint.com/:x:/g/personal/n00355603_upn_pe/IQBXlWmZyg6GTZ0YIC0SuXnnAZlbNOwkRYVPrzHTNeWfItA?e=hJNWfv"
+           target="_blank"
+           class="btn">
+            Matriz ATS
+        </a>
+    </div>
+</div>
+
+</div>
 
 </section>
 
